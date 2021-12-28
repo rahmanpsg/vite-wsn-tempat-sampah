@@ -1,6 +1,4 @@
 <script setup>
-import { defineProps } from "vue";
-
 import VaadinTrash from "virtual:vite-icons/vaadin/trash";
 
 defineProps({
