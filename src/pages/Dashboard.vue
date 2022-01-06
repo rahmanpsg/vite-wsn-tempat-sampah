@@ -7,8 +7,6 @@ import Alert from "../components/Alert.vue";
 import CardTotal from "../components/CardTotal.vue";
 import CardNode from "../components/CardNode.vue";
 
-import PhWarningBold from "virtual:vite-icons/ph/warning-bold";
-
 import supabase from "../plugins/supabase";
 
 const store = useStore();
@@ -29,7 +27,7 @@ const parseData = computed(() => {
   for (const d in data) {
     const v = data[d][data[d].length - 1];
 
-    res[d] = { node: v.node, tinggi: v.tinggi, berat: v.berat };
+    res[d] = { node: v.node, tinggi: v.tinggi.toFixed(2), berat: v.berat };
   }
 
   return res;
