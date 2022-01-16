@@ -42,6 +42,13 @@ const store = createStore({
         console.log(error);
       }
     },
+    resetData({ commit }) {
+      try {
+        commit("setData", {});
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 });
 
